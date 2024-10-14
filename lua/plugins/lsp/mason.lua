@@ -20,7 +20,7 @@ return {
 		mason_lspconfig.setup({
 			-- list of defaul servers to install
 			ensure_installed = {
-				"tsserver",
+				"ts_ls",
 				"html",
 				"cssls",
 				"tailwindcss",

@@ -1,6 +1,7 @@
 require("config.lazy")
 require("mason").setup()
 require("Comment").setup()
+require("nvim-ts-autotag").setup({})
 
 -- 1. important
 vim.o.compatible = false
