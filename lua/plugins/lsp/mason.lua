@@ -2,6 +2,7 @@ return {
 	"williamboman/mason.nvim",
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 	config = function()
 		-- import mason
@@ -9,6 +10,9 @@ return {
 
 		-- import mason-lspconfig
 		local mason_lspconfig = require("mason-lspconfig")
+
+		-- import mason-tool-installer
+		local mason_tool_installer = require("mason-tool-installer")
 
 		-- enable mason 
 		mason.setup()
@@ -37,10 +41,18 @@ return {
 				"solang",
 				"tflint",
 				"yamlls",
-				"zls"
+				"zls",
 			},
 			-- auto-install servers we configured somewhere else (with lspconfig)
-			automatic_installation = true, 
+			automatic_installation = true,
+		})
+
+		mason_tool_installer.setup({
+			ensure_installed = {
+				"prettier",
+				"eslint_d",
+				"stylua",
+			}
 		})
 	end,
 }

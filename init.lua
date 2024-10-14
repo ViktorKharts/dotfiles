@@ -22,7 +22,10 @@ vim.o.cursorcolumn = false
 vim.o.cursorline = true
 vim.o.hlsearch = false
 
--- 6. using the mouse
+-- 6. multiple windows
+vim.o.scl = "yes"
+
+-- 9. using the mouse
 vim.o.mouse = ''
 
 -- 10. messages and info
@@ -37,7 +40,7 @@ vim.o.sw = 4 -- shiftwidth
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 vim.o.guicursor = ""
-vim.o.termguicolors = true
+vim.o.termguicolors = false
 
 -- Useful functions
 vim.api.nvim_create_autocmd("FileType", {
@@ -87,5 +90,4 @@ local wk = require("which-key")
 wk.add({
 	{ "<C-h>", group = "Harpoon" },
 })
-
 

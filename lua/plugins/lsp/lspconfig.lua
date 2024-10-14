@@ -15,7 +15,7 @@ return {
 		local keymap = vim.keymap
 
 		local opts = { noremap = true, silent = true }
-		local on_attach = function(client, bufnr)
+		local on_attach = function(_, bufnr)
 			opts.buffer = bufnr
 
 			-- set keymaps
@@ -58,6 +58,14 @@ return {
 			opts.desc = "Restart LSP"
 			keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", opts)
 		end
+
+	    -- Change the Diagnostic symbols in the sign column (gutter)
+	    -- (not in youtube nvim video)
+	    local signs = { Error = "E ", Warn = "W ", Hint = "H ", Info = "I " }
+	    for type, icon in pairs(signs) do
+	      local hl = "DiagnosticSign" .. type
+	      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+	    end
 
 		-- used to enable autocompletion 
 		local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -144,7 +152,7 @@ return {
 
 		-- configure eslint
 		lspconfig["eslint"].setup({
-			on_attach = function(client, bufnr)
+			on_attach = function(_, bufnr)
 				vim.api.nvim_create_autocmd("BufWritePre", {
 					buffer = bufnr,
 					command = "EslingFixAll",

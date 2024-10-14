@@ -1,5 +1,4 @@
 return {
-	"lewis6991/gitsigns.nvim",
 	"nvim-tree/nvim-web-devicons",
 	"mfussenegger/nvim-lint",
 	"ThePrimeagen/vim-be-good",
@@ -8,4 +7,3 @@ return {
 	"nvim-treesitter/nvim-treesitter-context",
 }
 
-	-- "wellle/context.vim",
