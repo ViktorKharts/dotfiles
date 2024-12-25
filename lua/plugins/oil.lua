@@ -1,8 +1,9 @@
 return {
 	{
 		"stevearc/oil.nvim",
+		event = "VeryLazy",
 		opts = {
-			default_file_explorer = false,
+			default_file_explorer = true,
 			natural_order = false,
 			view_options = {
 				show_hidden = true,

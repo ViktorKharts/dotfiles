@@ -43,23 +43,6 @@ vim.o.timeoutlen = 300
 vim.o.guicursor = ""
 vim.o.termguicolors = false
 
--- Useful functions
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "*",
-	callback=function() -- prevent from commenting new line after o, O, and Enter in i mode
-		vim.opt_local.formatoptions:remove({'c', 'r', 'o'})
-	end,
-})
-
-local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
-vim.api.nvim_create_autocmd("TextYankPost", {
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	group = highlight_group,
-})
-
 -- global keymappings
 local keymap = vim.keymap
 
@@ -90,5 +73,23 @@ keymap.set("n", "[c", function() t_context.go_to_context(vim.v.count1) end, { si
 local wk = require("which-key")
 wk.add({
 	{ "<C-h>", group = "Harpoon" },
+})
+vim.keymap.set("n", "<leader>z", "<cmd>:Lazy<cr>", { desc = "Plugin Manager" })
+
+-- Useful functions
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
+	callback=function() -- prevent from commenting new line after o, O, and Enter in i mode
+		vim.opt_local.formatoptions:remove({'c', 'r', 'o'})
+	end,
+})
+
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
 })
 
