@@ -19,7 +19,7 @@ return {
       -- Lazy
       { "<leader>l", "<cmd>Lazy<cr>", desc = "Plugin Manager" },
 
-      -- LSP manager
+      -- Mason 
       { "<leader>m", "<cmd>Mason<cr>", desc = "Lsp Manager" },
 
       -- Diffview 
