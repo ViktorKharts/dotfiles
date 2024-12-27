@@ -17,5 +17,20 @@ return {
       default = true,
     },
   },
+  {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
+    config = true,
+  },
+  {
+    "NeogitOrg/neogit",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-lua/plenary.nvim",       
+      "sindrets/diffview.nvim",        
+      "nvim-telescope/telescope.nvim",
+    },
+    config = true
+  }
 }
 

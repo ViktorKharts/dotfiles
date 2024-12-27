@@ -62,3 +62,10 @@ keymap("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Plugin Manager" })
 -- LSP manager
 keymap("n", "<leader>m", "<cmd>Mason<cr>", { desc = "Lsp Manager" })
 
+-- Diffview 
+keymap("n", "<C-d>o", "<cmd>DiffviewOpen<cr>", { desc = "Open Diff View" })
+keymap("n", "<C-d>c", "<cmd>DiffviewClose<cr>", { desc = "Close Diff View" })
+
+-- Neogit
+keymap("n", "<leader>n", "<cmd>Neogit<cr>", { desc = "Toggle Neogit" })
+

@@ -25,7 +25,7 @@ vim.o.signcolumn = "yes" -- draw signcolumn
 vim.o.laststatus = 2 -- status line for last window
 
 -- 9. using the mouse
-vim.o.mouse = ''
+vim.o.mouse = 'a'
 
 -- 10. messages and info
 vim.o.ruler = true
