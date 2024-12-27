@@ -13,21 +13,21 @@ keymap("v", ">", ">gv")
 keymap("v", "p", '"_dP')
 
 -- Switch buffer
-keymap("n", "<S-h>", ":bprevious<CR>")
-keymap("n", "<S-l>", ":bnext<CR>")
+keymap("n", "<S-h>", "<cmd>bprevious<CR>")
+keymap("n", "<S-l>", "<cmd>bnext<CR>")
 
 -- Cancel search highlighting with ESC
-keymap("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>")
+keymap("n", "<ESC>", "<cmd>nohlsearch<Bar>:echo<CR>")
 
 -- Move selected line / block of text in visual mode
 keymap("x", "K", ":move '<-2<CR>gv-gv")
 keymap("x", "J", ":move '>+1<CR>gv-gv")
 
 -- Resize windows 
-keymap("n", "<Left>", ":vertical resize +1<CR>")
-keymap("n", "<Right>", ":vertical resize -1<CR>")
-keymap("n", "<Up>", ":resize -1<CR>")
-keymap("n", "<Down>", ":resize +1<CR>")
+keymap("n", "<Left>", "<cmd>vertical resize +1<CR>")
+keymap("n", "<Right>", "<cmd>vertical resize -1<CR>")
+keymap("n", "<Up>", "<cmd>resize -1<CR>")
+keymap("n", "<Down>", "<cmd>resize +1<CR>")
 
 -- Center search results
 keymap("n", "n", "nzz")
@@ -57,5 +57,8 @@ t_context.setup()
 keymap("n", "[c", function() t_context.go_to_context(vim.v.count1) end, { silent = true, desc = "Jump to ctx start" })
 
 -- Plugin manager
-keymap("n", "<leader>z", "<cmd>:Lazy<cr>", { desc = "Plugin Manager" })
+keymap("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Plugin Manager" })
+
+-- LSP manager
+keymap("n", "<leader>m", "<cmd>Mason<cr>", { desc = "Lsp Manager" })
 

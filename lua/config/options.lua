@@ -22,7 +22,7 @@ vim.o.hlsearch = false
 
 -- 6. multiple windows
 vim.o.signcolumn = "yes" -- draw signcolumn
-vim.o.laststatus = 0 -- status line for last window
+vim.o.laststatus = 2 -- status line for last window
 
 -- 9. using the mouse
 vim.o.mouse = ''
@@ -51,4 +51,6 @@ vim.o.pumheight = 10 -- max items in the menu
 vim.o.sessionoptions = "buffers,tabpages,curdir,winsize" -- mksession items to save
 vim.o.splitkeep = "screen" -- keep the text on the same screen line when window resizing
 vim.o.splitright = true -- always vsplit to the right
+
+vim.notify = require("notify")
 

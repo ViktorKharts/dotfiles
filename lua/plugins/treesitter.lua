@@ -16,7 +16,6 @@ return {
 				enable = true,
 			},
 			ensure_installed = {
-				"ada",
 				"angular",
 				"bash",
 				"c",
@@ -30,7 +29,6 @@ return {
 				"markdown",
 				"markdown_inline",
 				"query",
-				"rust",
 				"sql",
 				"terraform",
 				"tmux",
@@ -38,7 +36,6 @@ return {
 				"vim",
 				"vimdoc",
 				"yaml",
-				"zig"
 			},
 		},
 	},
