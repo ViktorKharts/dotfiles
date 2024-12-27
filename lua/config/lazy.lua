@@ -24,6 +24,7 @@ require("lazy").setup("plugins", {
     missing = true,
     colorscheme = {
       "tokyonight",
+      "gruvbox",
       "gruvbox-material"
     }
   },
