@@ -4,7 +4,6 @@ return {
   "ThePrimeagen/vim-be-good",
   "MunifTanjim/prettier.nvim",
   "williamboman/mason.nvim",
-  "nvim-treesitter/nvim-treesitter-context",
   {
     "folke/lazydev.nvim",
     ft = "lua", -- only load on lua files
@@ -31,6 +30,6 @@ return {
       "nvim-telescope/telescope.nvim",
     },
     config = true
-  }
+  },
 }
 
