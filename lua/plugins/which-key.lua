@@ -34,6 +34,9 @@ return {
 
       -- Oil
       { "<leader>-", "<cmd>Oil<CR>", desc = "Open file tree" },
+
+      -- Treesitter buffer reparse
+      { "<leader>tsr>", "<cmd>write | edit | TSBufEnable highlight<cr>", desc = "Treesitter buffer reparse"}
     },
   },
 }
