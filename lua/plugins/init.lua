@@ -44,7 +44,7 @@ return {
     "f-person/git-blame.nvim",
     opts = {
       enabled = true,
-      message_template = "• <date> • <author> •",
+      message_template = "• <author> • <date> • <summary> •",
       date_format = "%m-%d-%Y %H:%M:%S",
       virtual_text_column = 1, 
     },
@@ -53,6 +53,13 @@ return {
       { "<C-g>bcc", "<cmd>GitBlameCopyCommitURL<cr>", desc = "Copy Commit URL" },
       { "<C-g>bcf", "<cmd>GitBlameCopyFileURL<cr>", desc = "Copy File URL" },
       { "<C-g>bcs", "<cmd>GitBlameCopySHA<cr>", desc = "Copy Commit SHA" },
+    },
+  },
+  {
+    "ruifm/gitlinker.nvim",
+    event = "BufReadPre",
+    opts = {
+      mappings = "<leader>gb",
     },
   }
 }
