@@ -49,7 +49,10 @@ return {
       virtual_text_column = 1, 
     },
     keys = {
-      { "<C-g>b", "<cmd>GitBlameToggle<cr>", desc = "Toggle GitBlame" },
+      { "<C-g>bt", "<cmd>GitBlameToggle<cr>", desc = "Toggle GitBlame" },
+      { "<C-g>bcc", "<cmd>GitBlameCopyCommitURL<cr>", desc = "Copy Commit URL" },
+      { "<C-g>bcf", "<cmd>GitBlameCopyFileURL<cr>", desc = "Copy File URL" },
+      { "<C-g>bcs", "<cmd>GitBlameCopySHA<cr>", desc = "Copy Commit SHA" },
     },
   }
 }
