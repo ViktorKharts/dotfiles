@@ -59,3 +59,6 @@ vim.g.gitgutter_map_keys = 0
 vim.g.gitgutter_enabled = 1
 vim.g.gitgutter_signs = 1
 
+-- gitblame
+vim.g.gitblame_delay = 0
+

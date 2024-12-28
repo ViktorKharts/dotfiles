@@ -39,6 +39,18 @@ return {
 
       keymap("n", "<C-g>t", "<cmd>GitGutterToggle<cr>", { desc = "Toggle Gitgutter" })
     end,
+  },
+  {
+    "f-person/git-blame.nvim",
+    opts = {
+      enabled = true,
+      message_template = "• <date> • <author> •",
+      date_format = "%m-%d-%Y %H:%M:%S",
+      virtual_text_column = 1, 
+    },
+    keys = {
+      { "<C-g>b", "<cmd>GitBlameToggle<cr>", desc = "Toggle GitBlame" },
+    },
   }
 }
 
