@@ -16,9 +16,9 @@ vim.o.relativenumber = true
 vim.o.lz = true
 
 -- 5. syntax, highlighting and spelling
-vim.o.cursorcolumn = false
-vim.o.cursorline = true
-vim.o.hlsearch = false
+vim.o.cursorcolumn = false -- highlight a column the cursor is on 
+vim.o.cursorline = true -- highlight a line the cursor is on
+-- vim.o.hlsearch = false -- highlight search
 
 -- 6. multiple windows
 vim.o.signcolumn = "yes" -- draw signcolumn
@@ -53,4 +53,9 @@ vim.o.splitkeep = "screen" -- keep the text on the same screen line when window 
 vim.o.splitright = true -- always vsplit to the right
 
 vim.notify = require("notify")
+
+-- gitgutter globals
+vim.g.gitgutter_map_keys = 0
+vim.g.gitgutter_enabled = 1
+vim.g.gitgutter_signs = 1
 

@@ -31,5 +31,14 @@ return {
     },
     config = true
   },
+  {
+    "airblade/vim-gitgutter",
+    event = "VeryLazy",
+    config = function() 
+      local keymap = vim.keymap.set
+
+      keymap("n", "<C-g>t", "<cmd>GitGutterToggle<cr>", { desc = "Toggle Gitgutter" })
+    end,
+  }
 }
 
