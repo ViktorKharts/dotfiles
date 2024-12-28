@@ -3,7 +3,7 @@ return {
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
-    event = "VeryLazy",
+    event = "BufReadPre",
     config = function()
       local harpoon=require("harpoon")
       local keymap = vim.keymap.set

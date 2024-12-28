@@ -31,12 +31,12 @@ return {
       tokyonight.load()
     end,
   },
-  {
-    "catppuccin/nvim",
-    event = "VeryLazy",
-    name = "catppuccin",
-    priority = 1000,
-  },
+  -- {
+  --   "catppuccin/nvim",
+  --   event = "VeryLazy",
+  --   name = "catppuccin",
+  --   priority = 1000,
+  -- },
   {
     "ellisonleao/gruvbox.nvim",
     event = "VeryLazy",
