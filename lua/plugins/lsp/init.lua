@@ -25,6 +25,7 @@ return {
 		ensure_installed = {
 			"stylua",
 			"ruff",
+			"debugpy",
 		},
 		config = function(plugin)
 			require("mason").setup()
