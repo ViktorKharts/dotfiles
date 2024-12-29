@@ -1,8 +1,8 @@
 -- prevent from commenting new line after o, O, and Enter in i mode
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",
-	callback=function() 
-		vim.opt_local.formatoptions:remove({'c', 'r', 'o'})
+	callback = function()
+		vim.opt_local.formatoptions:remove({ "c", "r", "o" })
 	end,
 })
 
@@ -16,3 +16,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = highlight_group,
 })
 
+-- auto format on buff save
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*",
+	callback = function()
+		require("plugins.lsp.format").format()
+	end,
+})
