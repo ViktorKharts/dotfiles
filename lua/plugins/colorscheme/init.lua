@@ -30,10 +30,14 @@ return {
 						italic = false,
 					},
 				},
-				on_highlights = function(hl, c)
+				on_highlights = function(hl, _)
 					hl.GitGutterAdd = { fg = "#23ff36" }
 					hl.GitGutterChange = { fg = "#0292fe" }
 					hl.GitGutterDelete = { fg = "#ea0303" }
+
+					hl.NeogitDiffContextHighlight = nil
+					hl.NeogitDiffAddHighlight = nil
+					hl.NeogitDiffDeleteHighlight = nil
 				end,
 			})
 
