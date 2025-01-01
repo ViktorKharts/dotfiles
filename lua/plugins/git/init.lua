@@ -42,7 +42,7 @@ return {
 		"ruifm/gitlinker.nvim",
 		event = "BufReadPre",
 		opts = {
-			mappings = "<leader>gb",
+			mappings = "<leader>gl",
 		},
 	},
 }

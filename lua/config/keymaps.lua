@@ -23,7 +23,7 @@ keymap("n", "<ESC>", "<cmd>nohlsearch<Bar>:echo<CR>")
 keymap("x", "K", ":move '<-2<CR>gv-gv")
 keymap("x", "J", ":move '>+1<CR>gv-gv")
 
--- Resize windows 
+-- Resize windows
 keymap("n", "<Left>", "<cmd>vertical resize +1<CR>")
 keymap("n", "<Right>", "<cmd>vertical resize -1<CR>")
 keymap("n", "<Up>", "<cmd>resize -1<CR>")
@@ -32,4 +32,3 @@ keymap("n", "<Down>", "<cmd>resize +1<CR>")
 -- Center search results
 keymap("n", "n", "nzz")
 keymap("n", "N", "Nzz")
-

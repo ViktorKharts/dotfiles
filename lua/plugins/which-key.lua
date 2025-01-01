@@ -8,13 +8,13 @@ return {
 			-- refer to the configuration section below
 		},
 		keys = {
-			{
-				"<leader>?",
-				function()
-					require("which-key").show({ global = false })
-				end,
-				desc = "Buffer Local Keymaps (which-key)",
-			},
+			-- {
+			-- 	"<leader>?",
+			-- 	function()
+			-- 		require("which-key").show({ global = false })
+			-- 	end,
+			-- 	desc = "Buffer Local Keymaps (which-key)",
+			-- },
 
 			-- Lazy
 			{ "<leader>l", "<cmd>Lazy<cr>", desc = "Plugin Manager" },
