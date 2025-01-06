@@ -51,7 +51,11 @@ local servers = {
 	},
 	marksman = {},
 	tailwindcss = {},
-	eslint = {},
+	eslint = {
+		settings = {
+			workingDirectory = { mode = "auto" },
+		},
+	},
 	angularls = {},
 	html = {},
 }
