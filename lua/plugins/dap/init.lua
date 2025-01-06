@@ -35,7 +35,7 @@ local M = {
 			commented = true,
 		})
 
-		keymap("n", "<space>b", dap.toggle_breakpoint)
+		keymap("n", "<space>b", dap.toggle_breakpoint, { desc = "Set Breakpoint" })
 		keymap("n", "<F1>", dap.continue)
 		keymap("n", "<F2>", dap.step_into)
 		keymap("n", "<F3>", dap.step_over)
