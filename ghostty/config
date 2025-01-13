@@ -1,0 +1,17 @@
+background-opacity=0.9
+
+window-decoration=false
+
+cursor-style-blink=false
+cursor-color=#f5c33b
+
+theme=Builtin Solarized Dark
+
+font-synthetic-style=false
+
+palette = 2=#e3ad39 
+palette = 8=#666363
+palette = 10=#de02f5 
+foreground = #e0fffc 
+
+command="fish"
