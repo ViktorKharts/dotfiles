@@ -12,14 +12,14 @@ return {
 		"numToStr/Comment.nvim",
 		opts = {},
 	},
-	{
-		"rcarriga/nvim-notify",
-		event = "VeryLazy",
-		enabled = true,
-		config = {
-			default = true,
-		},
-	},
+	-- {
+	-- 	"rcarriga/nvim-notify",
+	-- 	event = "VeryLazy",
+	-- 	enabled = true,
+	-- 	config = {
+	-- 		default = true,
+	-- 	},
+	-- },
 	{
 		"stevearc/dressing.nvim",
 		event = "VeryLazy",
@@ -36,17 +36,5 @@ return {
 	{
 		"mbbill/undotree",
 		event = "VeryLazy",
-	},
-	{
-		"Equilibris/nx.nvim",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-		},
-		opts = {
-			nx_cmd_root = "npx nx",
-		},
-		keys = {
-			{ "<leader>x", "<cmd>Telescope nx actions<CR>", desc = "nx actions" },
-		},
 	},
 }

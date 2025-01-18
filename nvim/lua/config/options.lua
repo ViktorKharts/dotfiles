@@ -16,7 +16,7 @@ vim.o.relativenumber = true
 vim.o.lz = true
 
 -- 5. syntax, highlighting and spelling
-vim.o.cursorcolumn = false -- highlight a column the cursor is on 
+vim.o.cursorcolumn = false -- highlight a column the cursor is on
 vim.o.cursorline = true -- highlight a line the cursor is on
 -- vim.o.hlsearch = false -- highlight search
 
@@ -25,7 +25,7 @@ vim.o.signcolumn = "yes" -- draw signcolumn
 vim.o.laststatus = 2 -- status line for last window
 
 -- 9. using the mouse
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 
 -- 10. messages and info
 vim.o.ruler = true
@@ -41,7 +41,7 @@ vim.o.sw = 2 -- shiftwidth
 vim.o.expandtab = true
 vim.o.smartindent = true -- better indentation
 
--- global vars 
+-- global vars
 vim.o.updatetime = 200 -- auto write swap file to disk
 vim.o.timeoutlen = 300
 vim.o.guicursor = ""
@@ -52,7 +52,7 @@ vim.o.sessionoptions = "buffers,tabpages,curdir,winsize" -- mksession items to s
 vim.o.splitkeep = "screen" -- keep the text on the same screen line when window resizing
 vim.o.splitright = true -- always vsplit to the right
 
-vim.notify = require("notify")
+-- vim.notify = require("notify")
 
 -- gitgutter globals
 vim.g.gitgutter_map_keys = 0
@@ -61,4 +61,3 @@ vim.g.gitgutter_signs = 1
 
 -- gitblame
 vim.g.gitblame_delay = 0
-
