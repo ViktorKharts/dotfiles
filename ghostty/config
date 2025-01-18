@@ -1,4 +1,5 @@
 background-opacity=0.9
+background-blur-radius=20
 
 window-decoration=false
 
@@ -15,3 +16,4 @@ palette = 10=#de02f5
 foreground = #e0fffc 
 
 command="fish"
+# command=/opt/homebrew/bin/fish

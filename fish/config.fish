@@ -39,9 +39,15 @@ alias v=nvim
 #alias ll="ls -al"
 alias ec="vi .config/fish/config.fish" 
 alias sc="source ~/.config/fish/config.fish"
-alias s0="shutdown -r +0"
+alias s0="shutdown now"
+alias r0="reboot"
 alias lg=lazygit
 
+# linux key press rate
 setxkbmap -option "ctrl:swapcaps"
 xset r rate 150 60
+
+# macos key press rate
+#defaults write -g InitialKeyRepeat -int 10
+#defaults write -g KeyRepeat -int 1
 
