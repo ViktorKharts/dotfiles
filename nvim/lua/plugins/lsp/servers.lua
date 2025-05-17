@@ -77,7 +77,7 @@ end
 
 function M.setup(_)
 	lsp_attach(function(client, buffer)
-		require("plugins.lsp.format").on_attach(client, buffer)
+		-- require("plugins.lsp.format").on_attach(client, buffer)
 		require("plugins.lsp.keymaps").on_attach(client, buffer)
 	end)
 

@@ -15,11 +15,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 	group = highlight_group,
 })
-
--- auto format on buff save
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function()
-		require("plugins.lsp.format").format()
-	end,
-})
