@@ -22,7 +22,7 @@ return {
 	},
 	{
 		"windwp/nvim-ts-autotag",
-		event = "InsertEnter",
+    lazy = false,
 	},
 	{
 		"mbbill/undotree",

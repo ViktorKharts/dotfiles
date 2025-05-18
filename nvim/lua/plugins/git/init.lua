@@ -5,7 +5,7 @@ return {
 		config = function()
 			local keymap = vim.keymap.set
 
-			keymap("n", "<C-g>t", "<cmd>GitGutterToggle<cr>", { desc = "Toggle Gitgutter" })
+			keymap("n", "<C-g>tg", "<cmd>GitGutterToggle<cr>", { desc = "Toggle Gitgutter" })
 		end,
 	},
 	{
@@ -17,17 +17,17 @@ return {
 			virtual_text_column = 1,
 		},
 		keys = {
-			{ "<C-g>bt", "<cmd>GitBlameToggle<cr>", desc = "Toggle GitBlame" },
-			{ "<C-g>bcc", "<cmd>GitBlameCopyCommitURL<cr>", desc = "Copy Commit URL" },
-			{ "<C-g>bcf", "<cmd>GitBlameCopyFileURL<cr>", desc = "Copy File URL" },
-			{ "<C-g>bcs", "<cmd>GitBlameCopySHA<cr>", desc = "Copy Commit SHA" },
+			{ "<C-g>tb", "<cmd>GitBlameToggle<cr>", desc = "Toggle GitBlame" },
+			{ "<C-g>c", "<cmd>GitBlameCopyCommitURL<cr>", desc = "Copy Commit URL" },
+			{ "<C-g>f", "<cmd>GitBlameCopyFileURL<cr>", desc = "Copy File URL" },
+			{ "<C-g>s", "<cmd>GitBlameCopySHA<cr>", desc = "Copy Commit SHA" },
 		},
 	},
 	{
 		"ruifm/gitlinker.nvim",
 		event = "BufReadPre",
 		opts = {
-			mappings = "<leader>gl",
+			mappings = "<C-g>l",
 		},
 	},
 }

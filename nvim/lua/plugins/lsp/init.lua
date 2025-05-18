@@ -2,15 +2,16 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = "BufReadPre",
-		dependencies = {
+    dependencies = {
 			{ "folke/neoconf.nvim", cmd = "Neoconf", config = true },
-			{ "folke/neodev.nvim", config = true },
 			{ "j-hui/fidget.nvim", config = true },
 			{ "smjonas/inc-rename.nvim", config = true, opts = { input_buffer_type = "dressing" } },
-			"simrat39/rust-tools.nvim",
-			"rust-lang/rust.vim",
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+
+      "folke/lazydev.nvim",
+
+			{ "mason-org/mason.nvim", version = "^1.0.0" },
+			{ "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
+
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-nvim-lsp-signature-help",
 		},
@@ -19,7 +20,7 @@ return {
 		end,
 	},
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		cmd = "Mason",
 		keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" } },
 		ensure_installed = {
@@ -31,8 +32,8 @@ return {
 			require("mason").setup()
 			local mr = require("mason-registry")
 			for _, tool in ipairs(plugin.ensure_installed) do
-				local p = mr.get_package(tool)
-				if not p:is_installed() then
+				if not mr.is_installed(tool) then
+				  local p = mr.get_package(tool)
 					p:install()
 				end
 			end
