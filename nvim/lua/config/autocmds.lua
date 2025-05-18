@@ -16,10 +16,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = highlight_group,
 })
 
--- auto format on buff save
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
+-- linting
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
 	callback = function()
-		require("plugins.lsp.format").format()
+		require("lint").try_lint()
 	end,
 })

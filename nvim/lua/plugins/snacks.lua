@@ -6,11 +6,11 @@ return {
 		opts = {
 			picker = { enabled = true },
 			bigfile = { enabled = true, notfiy = true },
-			indent = { enabled = true },
+			indent = { enabled = false },
 			notifier = { enabled = true, timeout = 3000 },
 			statuscolumn = { enabled = true },
-			animate = { enabled = true },
-			scroll = { enabled = true },
+			animate = { enabled = false },
+			scroll = { enabled = false },
 		},
 		keys = {
 			{
@@ -215,42 +215,42 @@ return {
 				desc = "Colorschemes",
 			},
 			{
-				"<leader>qp",
+				"<leader>sp",
 				function()
 					Snacks.picker.projects()
 				end,
 				desc = "Projects",
 			},
 			-- LSP
-			-- {
-			-- 	"gd",
-			-- 	function()
-			-- 		Snacks.picker.lsp_definitions()
-			-- 	end,
-			-- 	desc = "Goto Definition",
-			-- },
-			-- {
-			-- 	"gr",
-			-- 	function()
-			-- 		Snacks.picker.lsp_references()
-			-- 	end,
-			-- 	nowait = true,
-			-- 	desc = "References",
-			-- },
-			-- {
-			-- 	"gI",
-			-- 	function()
-			-- 		Snacks.picker.lsp_implementations()
-			-- 	end,
-			-- 	desc = "Goto Implementation",
-			-- },
-			-- {
-			-- 	"gy",
-			-- 	function()
-			-- 		Snacks.picker.lsp_type_definitions()
-			-- 	end,
-			-- 	desc = "Goto T[y]pe Definition",
-			-- },
+			{
+				"gd",
+				function()
+					Snacks.picker.lsp_definitions()
+				end,
+				desc = "Goto Definition",
+			},
+			{
+				"gr",
+				function()
+					Snacks.picker.lsp_references()
+				end,
+				nowait = true,
+				desc = "peferences",
+			},
+			{
+				"gI",
+				function()
+					Snacks.picker.lsp_implementations()
+				end,
+				desc = "Goto Implementation",
+			},
+			{
+				"gt",
+				function()
+					Snacks.picker.lsp_type_definitions()
+				end,
+				desc = "Goto T[y]pe Definition",
+			},
 			{
 				"<leader>ss",
 				function()
@@ -258,6 +258,12 @@ return {
 				end,
 				desc = "LSP Symbols",
 			},
+      {
+       "<leader>nh",
+       function ()
+          Snacks.notifier.show_history() 
+       end
+      }
 		},
 	},
 }

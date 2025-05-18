@@ -13,17 +13,6 @@ local servers = {
 			},
 		},
 	},
-	rust_analyzer = {
-		settings = {
-			["rust-analyzer"] = {
-				cargo = { allFeatures = true },
-				checkOnSave = {
-					command = "cargo clippy",
-					extraArgs = { "--no-deps" },
-				},
-			},
-		},
-	},
 	lua_ls = {
 		settings = {
 			Lua = {
@@ -77,7 +66,7 @@ end
 
 function M.setup(_)
 	lsp_attach(function(client, buffer)
-		require("plugins.lsp.format").on_attach(client, buffer)
+		-- require("plugins.lsp.format").on_attach(client, buffer)
 		require("plugins.lsp.keymaps").on_attach(client, buffer)
 	end)
 
