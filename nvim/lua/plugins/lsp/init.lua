@@ -2,12 +2,12 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		event = "BufReadPre",
-    dependencies = {
+		dependencies = {
 			{ "folke/neoconf.nvim", cmd = "Neoconf", config = true },
 			{ "j-hui/fidget.nvim", config = true },
 			{ "smjonas/inc-rename.nvim", config = true, opts = { input_buffer_type = "dressing" } },
 
-      "folke/lazydev.nvim",
+			"folke/lazydev.nvim",
 
 			{ "mason-org/mason.nvim", version = "^1.0.0" },
 			{ "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
@@ -33,10 +33,47 @@ return {
 			local mr = require("mason-registry")
 			for _, tool in ipairs(plugin.ensure_installed) do
 				if not mr.is_installed(tool) then
-				  local p = mr.get_package(tool)
+					local p = mr.get_package(tool)
 					p:install()
 				end
 			end
 		end,
+	},
+	{
+		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
+		cmd = { "ConformInfo" },
+		opts = {
+			formatters_by_ft = {
+				lua = { "stylua" },
+				python = { "isort", "black" },
+				javascript = { "prettierd", "prettier", stop_after_first = true },
+				html = { "prettier" },
+				go = { "goimports", "gofmt" },
+				markdown = { "markdownlint", "prettier", stop_after_first = true },
+				json = { "prettier" },
+				yaml = { "prettier" },
+				sql = { "sql-formatter" },
+			},
+			default_format_opts = {
+				lsp_format = "fallback",
+			},
+			format_on_save = { timeout_ms = 500 },
+			formatters = {
+				shfmt = {
+					prepend_args = { "-i", "2" },
+				},
+			},
+		},
+		keys = {
+			{
+				"<leader><S-f>",
+				function()
+					require("conform").format({ async = true })
+				end,
+				desc = "Format buffer",
+				mode = "n",
+			},
+		},
 	},
 }

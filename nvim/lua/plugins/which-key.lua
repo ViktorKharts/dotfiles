@@ -4,10 +4,10 @@ return {
 		event = "VeryLazy",
 		keys = {
 			-- Lazy
-			{ "<leader>l", "<cmd>Lazy<cr>", desc = "Plugin Manager" },
+			{ "<leader><S-l>", "<cmd>Lazy<cr>", desc = "Plugin Manager" },
 
 			-- Mason
-			{ "<leader>m", "<cmd>Mason<cr>", desc = "Lsp Manager" },
+			{ "<leader><S-m>", "<cmd>Mason<cr>", desc = "Lsp Manager" },
 
 			-- Undo Tree
 			{ "<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Toggle undo tree" },
