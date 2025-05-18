@@ -23,7 +23,7 @@ return {
 		"mason-org/mason.nvim",
 		version = "^1.0.0",
 		cmd = "Mason",
-		keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" } },
+		keys = { { "<leader><S-m>", "<cmd>Mason<cr>", desc = "Mason" } },
 		ensure_installed = {
 			"stylua",
 			"ruff",

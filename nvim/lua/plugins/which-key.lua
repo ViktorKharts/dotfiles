@@ -6,9 +6,6 @@ return {
 			-- Lazy
 			{ "<leader><S-l>", "<cmd>Lazy<cr>", desc = "Plugin Manager" },
 
-			-- Mason
-			{ "<leader><S-m>", "<cmd>Mason<cr>", desc = "Lsp Manager" },
-
 			-- Undo Tree
 			{ "<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Toggle undo tree" },
 
