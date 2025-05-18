@@ -21,6 +21,7 @@ return {
 	},
 	{
 		"mason-org/mason.nvim",
+		version = "^1.0.0",
 		cmd = "Mason",
 		keys = { { "<leader>m", "<cmd>Mason<cr>", desc = "Mason" } },
 		ensure_installed = {
@@ -49,6 +50,7 @@ return {
 				python = { "isort", "black" },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				html = { "prettier" },
+				htmlangular = { "prettier" },
 				go = { "goimports", "gofmt" },
 				markdown = { "markdownlint", "prettier", stop_after_first = true },
 				json = { "prettier" },
@@ -75,5 +77,19 @@ return {
 				mode = "n",
 			},
 		},
+	},
+	{
+		"mfussenegger/nvim-lint",
+		event = "BufReadPre",
+		config = function()
+			require("lint").linters_by_ft = {
+				typescript = { "eslint_d" },
+				javascript = { "eslint_d" },
+				htmlangular = { "eslint_d" },
+				html = { "htmlhint " },
+				markdown = { "markdownlint" },
+				jsx = { "ast_grep " },
+			}
+		end,
 	},
 }

@@ -15,3 +15,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 	group = highlight_group,
 })
+
+-- linting
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+	callback = function()
+		require("lint").try_lint()
+	end,
+})

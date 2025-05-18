@@ -1,7 +1,5 @@
 return {
 	"nvim-tree/nvim-web-devicons",
-	"mfussenegger/nvim-lint",
-	{ "mason-org/mason.nvim", version = "^1.0.0" },
 	{
 		"folke/lazydev.nvim",
 		ft = "lua", -- only load on lua files
