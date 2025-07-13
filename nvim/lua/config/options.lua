@@ -1,3 +1,4 @@
+-- :options
 -- 1. important
 vim.o.compatible = false
 vim.o.clipboard = "unnamedplus"
@@ -10,6 +11,7 @@ vim.o.smartcase = true -- override 'ignorecase' if uppercase characters provided
 -- 4. displaying text
 vim.o.scr = 20
 vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
 vim.o.sms = true
 vim.o.number = true
 vim.o.relativenumber = true
@@ -18,7 +20,6 @@ vim.o.lz = true
 -- 5. syntax, highlighting and spelling
 vim.o.cursorcolumn = false -- highlight a column the cursor is on
 vim.o.cursorline = true -- highlight a line the cursor is on
--- vim.o.hlsearch = false -- highlight search
 
 -- 6. multiple windows
 vim.o.signcolumn = "yes" -- draw signcolumn
@@ -32,7 +33,8 @@ vim.o.ruler = true
 
 -- 12. editing text
 vim.o.completeopt = "menuone,noselect"
-vim.o.undofile = true -- auto same undo history
+vim.o.undofile = true
+vim.o.undodir = vim.fn.expand("~/.vim/undodir")
 
 -- 13. tabs and indenting
 vim.o.tabstop = 2 -- num of spaces for a tab
@@ -41,9 +43,16 @@ vim.o.sw = 2 -- shiftwidth
 vim.o.expandtab = true
 vim.o.smartindent = true -- better indentation
 
--- global vars
+-- 17. reading and writing files
+vim.o.autoread = true
+vim.o.autowrite = false
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.swapfile = false
 vim.o.updatetime = 200 -- auto write swap file to disk
 vim.o.timeoutlen = 300
+
+-- global vars
 vim.o.guicursor = ""
 vim.o.termguicolors = true
 vim.o.pumblend = 10 -- popup menu transparency
@@ -51,8 +60,6 @@ vim.o.pumheight = 10 -- max items in the menu
 vim.o.sessionoptions = "buffers,tabpages,curdir,winsize" -- mksession items to save
 vim.o.splitkeep = "screen" -- keep the text on the same screen line when window resizing
 vim.o.splitright = true -- always vsplit to the right
-
--- vim.notify = require("notify")
 
 -- gitgutter globals
 vim.g.gitgutter_map_keys = 0
