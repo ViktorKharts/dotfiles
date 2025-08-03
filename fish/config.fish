@@ -51,3 +51,5 @@ xset r rate 150 60
 #defaults write -g InitialKeyRepeat -int 10
 #defaults write -g KeyRepeat -int 1
 
+set -gx EDITOR nvim
+
