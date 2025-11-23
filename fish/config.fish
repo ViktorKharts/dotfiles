@@ -4,22 +4,22 @@
 #end
 
 if status is-interactive
-and not set -q TMUX
+    and not set -q TMUX
     exec tmux
 end
 
 function fish_user_key_bindings
-  #bind \cc 'echo; commandline | cat; commandline ""; commandline -f repaint'
-  #bind ll 'ls -al'
+    #bind \cc 'echo; commandline | cat; commandline ""; commandline -f repaint'
+    #bind ll 'ls -al'
 end
 
 function y
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	yazi $argv --cwd-file="$tmp"
-	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-		builtin cd -- "$cwd"
-	end
-	rm -f -- "$tmp"
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end
 
 #lg()
@@ -37,15 +37,18 @@ end
 alias vi=nvim
 alias v=nvim
 #alias ll="ls -al"
-alias ec="vi .config/fish/config.fish" 
+alias ec="vi .config/fish/config.fish"
 alias sc="source ~/.config/fish/config.fish"
-alias s0="shutdown now"
-alias r0="reboot"
+alias sd="shutdown now"
+alias re="reboot"
 alias lg=lazygit
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
 # linux key press rate
-setxkbmap -option "ctrl:swapcaps"
-xset r rate 150 60
+# setxkbmap -option "ctrl:swapcaps"
+# xset r rate 150 60
 
 # macos key press rate
 #defaults write -g InitialKeyRepeat -int 10
@@ -53,3 +56,4 @@ xset r rate 150 60
 
 set -gx EDITOR nvim
 
+set -U fish_mouse_autosequence 0
