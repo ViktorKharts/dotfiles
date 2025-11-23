@@ -1,0 +1,13 @@
+{
+    "window.commandCenter": true,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSurroundingLines": 10,
+    "editor.cursorSurroundingLinesStyle": "all",
+    "editor.minimap.enabled": true,
+    "editor.lineNumbers": "relative",
+    "editor.cursorStyle": "block",
+    "workbench.colorTheme": "Theme Flat",
+    "vim.scroll": 20,
+}
+
